@@ -1,0 +1,21 @@
+name: Archive Old Repositories
+
+on: 
+  schedule:
+    - cron: '0 0 * * *' # set the schedule as needed (e.g., every day at midnight)
+
+jobs:
+  archive-old-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Respository
+        uses: actions/checkout@v2
+
+      - name: Archive Old Repositories
+        run: | 
+        # logic to identify and archive old repositories (replace with your criteria)
+        # example: archive repositories older than 1 year for repo
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
